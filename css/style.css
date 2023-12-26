@@ -165,7 +165,7 @@ section .main .main_tag .main_btn{
 }
 .about .about_image{
     margin-top: 20px;
-    width: 40%;
+    width: 30%;
 }
 .about .about_image img{
     width: 100%;
@@ -173,7 +173,39 @@ section .main .main_tag .main_btn{
    box-shadow: -3px 2px 10px #000;
 
 }
+.featured .f-info{
+    margin-bottom: 20px;
+}
+.featured .about_btn{
+    background-color: var(--white);
+    text-decoration: none;
+    color: #000;
+    padding: 15px 15px;
+    border-radius: 5px;
+    transition: 0.3s all ease-in-out;
+    
+}
+.featured .about_btn:hover{
+background-color: #000;
+color: var(--white);
+}
+.arrivals .about_btn{
+    background-color: var(--white);
+    text-decoration: none;
+    color: #000;
+    padding: 15px 15px;
+    border-radius: 5px;
+    transition: 0.3s all ease-in-out;
+    
+}
+.arrivals .about_btn:hover{
+background-color: #000;
+color: var(--white);
+}
 
+.arrivals .f-info{
+    margin-bottom: 20px;
+}
 .about .about_tag h3{
     font-size: 50px;
     position: relative;
@@ -657,6 +689,163 @@ section .main .main_tag .main_btn{
     transform: scale(0.9, 0.9);
   }
 
+.reviews .rform{
+    background-color: var(--color-light);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 1.875rem #00000014;
+    gap: var(--gap);
+    margin-bottom: 5rem;
+    width: 90%;
+    margin-left: 65px;
+}
+.reviews form .input-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 54px;
+    padding: 15px 0px;
+}
+.reviews form .input-group input {
+    width:49.5%;
+}
+.reviews input{
+    height: 54px;
+    width: 100%;
+    color: #999999;
+    border: 1px solid #ccc;
+    padding: 15px 15px;
+    border: 2px solid #E7E3E3;
+    margin: 0px 0px; 
+   
+}
+
+textarea{
+    text-align: left;
+    height: 116px;
+    width:100%;
+    border: 1px solid #ccc;
+    color: #999999;
+    padding: 15px 15px;
+    border: 2px solid #E7E3E3;
+    resize: vertical;
+    
+   
+}
+
+.reviews .btn-main {
+    background-color: var(--primary-color);
+    padding: 1rem 1.5rem;
+    font-size: 0.9375rem;
+    border-radius: 100vh;
+    border: none;
+    color: white; 
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+    margin-top: 1rem;
+}
+.reviews .btn-main:hover{
+    background-color: var(--shadow);
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #666;
+    --fill: #ffc73a;
+  }
+  
+  .rating input {
+    appearance: unset;
+    border: none;
+    
+  }
+  
+  .rating label {
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .rating svg {
+    width: 2rem;
+    height: 2rem;
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+  }
+  
+  @keyframes idle {
+    from {
+      stroke-dashoffset: 24;
+    }
+  }
+  
+  .rating label:hover svg {
+    stroke: var(--fill);
+  }
+  
+  .rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+  
+  @keyframes yippee {
+    0% {
+      transform: scale(1);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30% {
+      transform: scale(0);
+      fill: var(--fill);
+      fill-opacity: 0;
+      stroke-opacity: 1;
+      stroke: var(--stroke);
+      stroke-dasharray: 10;
+      stroke-width: 1px;
+      stroke-linejoin: bevel;
+    }
+  
+    30.1% {
+      stroke: var(--fill);
+      stroke-dasharray: 0;
+      stroke-linejoin: miter;
+      stroke-width: 8px;
+    }
+  
+    60% {
+      transform: scale(1.2);
+      fill: var(--fill);
+    }
+  }
+  
+
+
+
+/* end reviews */
+
+
 
   /* libraries */
 
@@ -893,8 +1082,114 @@ textarea{
     transition: 0.5s all ease-in-out;
 }
 .contact-us .btn-main:hover{
-    background-color: var(--p);
+    background-color: var(--shadow);
 }
+/* footer */
+
+.container-f{
+    display: flex;
+    margin: auto;
+    width: 95%;
+}
+.footer {
+    background-color:var(--shadow);
+    color: #fff;
+    box-shadow: 0px -1px 5px #0007;
+    background-size: contain;
+   
+}
+.footer .footer1{
+    width: calc(30%);
+    padding-right: 2rem;
+    padding-block: 3rem;
+}
+.footer .footer1 div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+.footer .footer1 img {
+    width: 6rem;
+    height: 6rem;
+}
+.logo {
+    font-size: 30px;
+}
+
+.footer .footer1 p {
+    margin-block: 0.625rem;
+}
+.footer .footer1 h3 {
+    text-align: center;
+    padding: 0.625rem;
+    border-bottom: 2px solid #ddd6;
+    margin-bottom: 0.625rem;
+}
+.footer .footer1 .social-links {
+    padding: 0.625rem;
+    display: flex;
+    justify-content: space-around;
+}
+.footer li{
+    list-style: none;
+}
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer .footer1 .social-links i {
+    font-size: 1.5rem;
+}
+.footer .footer2 {
+    width: calc(100%/2);
+    padding-block: 3rem;
+}
+footer .footer2-box p {
+    margin-block: 0.625rem;
+}
+
+.footer .footer2-group {
+    margin-block: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.footer .footer2-group button{
+border-radius: 0%;
+}
+.footer .footer2-links ul {
+    --gap: 1.25rem;
+    margin-top: 0.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--gap);
+    list-style: none;
+}
+.footer .footer2-links ul li {
+    width: calc(calc(100% - var(--gap)) / 2);
+    padding: 5px;
+}
+ 
+.footer .contact-details h3 {
+    margin-bottom: 10px;
+    padding-left: 3rem;
+}
+.footer .contact-details{
+    width: calc(30%);
+    padding-block: 3rem;
+
+}
+.footer .contact-details ul li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+}
+.footer .contact-details ul li i{
+   color: var(--primary-color);
+   padding-right: 1rem;
+}
+
 
 /* book page */
 
